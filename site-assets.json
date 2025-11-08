@@ -9,10 +9,14 @@
       "description": "Blog name, tagline, and general configuration",
       "handler": "handlers/blog-config.js",
       "maxSize": 5120,
-      "allowedExtensions": [".json"],
+      "allowedExtensions": [
+        ".json"
+      ],
       "schema": {
         "type": "object",
-        "required": ["blogName"],
+        "required": [
+          "blogName"
+        ],
         "properties": {
           "blogName": {
             "type": "string",
@@ -36,10 +40,15 @@
       "description": "Hero section title and subtitle",
       "handler": "handlers/hero.js",
       "maxSize": 2048,
-      "allowedExtensions": [".json"],
+      "allowedExtensions": [
+        ".json"
+      ],
       "schema": {
         "type": "object",
-        "required": ["title", "subtitle"],
+        "required": [
+          "title",
+          "subtitle"
+        ],
         "properties": {
           "title": {
             "type": "string",
@@ -59,10 +68,15 @@
       "description": "Author bio, avatar, and contact information",
       "handler": "handlers/author.js",
       "maxSize": 10240,
-      "allowedExtensions": [".json"],
+      "allowedExtensions": [
+        ".json"
+      ],
       "schema": {
         "type": "object",
-        "required": ["name", "bio"],
+        "required": [
+          "name",
+          "bio"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -100,16 +114,24 @@
       "description": "Social media links for the blog",
       "handler": "handlers/social.js",
       "maxSize": 5120,
-      "allowedExtensions": [".json"],
+      "allowedExtensions": [
+        ".json"
+      ],
       "schema": {
         "type": "object",
-        "required": ["links"],
+        "required": [
+          "links"
+        ],
         "properties": {
           "links": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["platform", "url", "icon"],
+              "required": [
+                "platform",
+                "url",
+                "icon"
+              ],
               "properties": {
                 "platform": {
                   "type": "string",
@@ -138,8 +160,61 @@
       "handler": "handlers/posts.js",
       "contains": {
         "type": "json",
-        "allowedExtensions": [".json"],
+        "allowedExtensions": [
+          ".json"
+        ],
         "maxSize": 102400
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string",
+            "format": "email"
+          },
+          "author": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "tags": {
+            "type": "array",
+            "items": {}
+          },
+          "image": {
+            "type": "string",
+            "format": "uri"
+          },
+          "readTime": {
+            "type": "string"
+          },
+          "featured": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "title",
+          "slug",
+          "excerpt",
+          "content",
+          "author",
+          "date",
+          "tags",
+          "image",
+          "readTime",
+          "featured"
+        ]
       }
     }
   ]
