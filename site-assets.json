@@ -163,58 +163,58 @@
         "allowedExtensions": [
           ".json"
         ],
-        "maxSize": 102400
-      },
-      "schema": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string"
+        "maxSize": 102400,
+        "schema": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "slug": {
+              "type": "string"
+            },
+            "excerpt": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string",
+              "format": "email"
+            },
+            "author": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string",
+              "format": "date"
+            },
+            "tags": {
+              "type": "array",
+              "items": {}
+            },
+            "image": {
+              "type": "string",
+              "format": "uri"
+            },
+            "readTime": {
+              "type": "string"
+            },
+            "featured": {
+              "type": "boolean"
+            }
           },
-          "slug": {
-            "type": "string"
-          },
-          "excerpt": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string",
-            "format": "email"
-          },
-          "author": {
-            "type": "string"
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "tags": {
-            "type": "array",
-            "items": {}
-          },
-          "image": {
-            "type": "string",
-            "format": "uri"
-          },
-          "readTime": {
-            "type": "string"
-          },
-          "featured": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "title",
-          "slug",
-          "excerpt",
-          "content",
-          "author",
-          "date",
-          "tags",
-          "image",
-          "readTime",
-          "featured"
-        ]
+          "required": [
+            "title",
+            "slug",
+            "excerpt",
+            "content",
+            "author",
+            "date",
+            "tags",
+            "image",
+            "readTime",
+            "featured"
+          ]
+        }
       }
     }
   ]
