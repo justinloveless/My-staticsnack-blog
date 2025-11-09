@@ -178,7 +178,7 @@
             },
             "content": {
               "type": "string",
-              "format": "email"
+              "multiline": true
             },
             "author": {
               "type": "string"
